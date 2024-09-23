@@ -1,1 +1,0 @@
-# rickorti.github.io
