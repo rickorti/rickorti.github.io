@@ -371,6 +371,15 @@ footer {
     color: #EAEAEA;
 }
 
+.prox-link {
+    color: black;
+    transition: color .5s ease;
+}
+
+.dark .prox-link {
+    color: #EAEAEA;
+}
+
 .mod-link {
     color: black;
     text-decoration: none;
