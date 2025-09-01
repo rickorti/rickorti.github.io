@@ -20,6 +20,11 @@
         </header>
         <script>
             window.onload = () => {
+                const dark_icon = '<svg fill="#41424A" width="800px" height="800px" viewBox="0 0 35 35" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg"><path d="M 18.44 34.68 C 17.455 34.68 16.472 34.599 15.5 34.44 C 5.601 32.816 -1.111 23.481 0.5 13.58 C 1.377 8.095 4.73 3.319 9.59 0.63 C 10.416 0.168 11.436 0.231 12.2 0.79 C 13.04 1.347 13.44 2.371 13.2 3.35 L 11.99 3.1 L 13.22 3.32 C 11.775 10.902 16.071 18.406 23.34 21 C 26.062 21.945 28.991 22.128 31.81 21.53 C 33.653 21.168 35.197 22.937 34.588 24.715 C 34.555 24.812 34.515 24.907 34.47 25 C 31.327 30.942 25.162 34.665 18.44 34.68 Z M 11.954 20.229 L 14.38 23.091 L 11.991 22.797 L 9.766 20.831 L 11.954 20.229 Z"/></svg>'
+                const light_icon = '<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#ffffff"><path d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></g><defs><clipPath id="a"><path fill="#41424A" d="M0 0h24v24H0z"/></clipPath></defs></svg>'
+    
+                let dark_mode = false
+
                 const dark_mode_elements = [document.querySelector('body'), document.querySelector('header'), document.querySelector('nav')]
                 const dark_mode_icon = document.querySelector('#dark-mode-icon')
                 const saved_dark_mode = window.localStorage.getItem('dark_mode')
