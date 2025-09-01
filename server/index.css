@@ -86,7 +86,7 @@ header.dark > .title {
     font-weight: bold;
     position: relative;
     left: 8rem;
-    max-width: 900px;
+    max-width: 1000px;
     bottom: calc(10rem - 100%);
     transform: translateY(-100%);
     font-family: 'Instrument Sans', sans-serif;
@@ -666,3 +666,4 @@ footer {
         background-size: 140%;
     }
 }
+
