@@ -18,5 +18,40 @@
             </nav>
             <div class="title">Il server &egrave; ufficialmente chiuso</div>
         </header>
+        <script>
+            window.onload = () => {
+                const dark_mode_elements = [document.querySelector('body'), document.querySelector('header'), document.querySelector('nav')]
+                const dark_mode_icon = document.querySelector('#dark-mode-icon')
+                const saved_dark_mode = window.localStorage.getItem('dark_mode')
+
+                if (saved_dark_mode !== null) {
+                    dark_mode = saved_dark_mode === 'true'
+                    if (dark_mode) {
+                        dark_mode_icon.innerHTML = light_icon
+                        for (let i = 0; i < dark_mode_elements.length; i++) {
+                            dark_mode_elements[i].classList.add('dark')
+                        }
+                    }
+                }
+
+                dark_mode_icon.onclick = () => {
+                    if (dark_mode) {
+                        dark_mode = false
+                        dark_mode_icon.innerHTML = dark_icon
+                        for (let i = 0; i < dark_mode_elements.length; i++) {
+                            dark_mode_elements[i].classList.remove('dark')
+                        }
+                    } else {
+                        dark_mode = true
+                        dark_mode_icon.innerHTML = light_icon
+                        for (let i = 0; i < dark_mode_elements.length; i++) {
+                            dark_mode_elements[i].classList.add('dark')
+                        }
+                    }
+
+                    window.localStorage.setItem('dark_mode', dark_mode)
+                }
+            }
+        </script>
     </body>
 </html>
